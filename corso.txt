@@ -1,0 +1,78 @@
+creazione progetto 
+	ng new nome-progetto
+configurazione bootstrap
+	npm install bootstrap@3
+	....
+	angular.js
+		projects->architect->options->styles aggiungere "node_modules/bootstrap/dist/css/bootstrap.min.css",
+
+---boot applicazione---		
+angular-cli compila-> crea il bundle iniettando codice javascript il quale eseguirà come prima istruzione quello contenuto in ./main.ts 
+nel main.ts viene eseguita platformBrowserDynamic().bootstrapModule(AppModule) che carica l'applicazione angular passando AppModule che descrive tutta l'applicazione.
+--------------------------
+
+backtick `(ALT+96) per il multiline string in typescript
+
+
+uso dei selectors
+	come element -> selector: 'app-servers'  -> <app-servers> </app-servers>
+	come attribute -> selector:'[app-servers]'  -> <div app-servers></div>
+	come class -> selector:'.app-servers'  -> <div class="app-servers"></div>
+in tutti e tre i casi il risultato è sempre lo stesso
+
+
+Conversione -> (<HTMLInputElement>event.target).value;
+
+
+
+Important: For Two-Way-Binding (covered in the next lecture) to work, you need to enable the ngModel  directive. This is done by adding the FormsModule  to the imports[]  array in the AppModule.
+
+You then also need to add the import from @angular/forms  in the app.module.ts file:
+
+import { FormsModule } from '@angular/forms'; 
+
+
+
+Strana sintassi su *ngIf
+
+
+
+<p *ngIf="serverCreated; else noServer">
+
+    Server was created, server name is {{ serverName }}
+
+</p>
+
+<ng-template #noServer>
+
+    <p>
+
+        No Server was created!
+
+    </p>
+
+</ng-template>
+
+
+
+Se serverCreated false visualizza ng-template
+
+
+
+[ngStyle]="{backgroundColor: getColor()}"
+
+
+
+[ngClass]="{online: serverStatus === 'online'}"
+
+
+
+//per non creare testing files
+
+ng g component recipes --skipTests true
+
+
+
+//creazione componente in una sottocartella
+
+ng g component recipes/recipe-list --skipTests true
