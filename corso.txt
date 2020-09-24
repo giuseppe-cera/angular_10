@@ -76,3 +76,20 @@ ng g component recipes --skipTests true
 //creazione componente in una sottocartella
 
 ng g component recipes/recipe-list --skipTests true
+
+// codice di sotto equivalente a dichiarare i due argomenti del costruttore ed assegnarli dentro il costruttore
+export class Ingredient {
+	constructor(public name: string, public amount: number) {}
+}
+// equivalente a 
+export class Ingredient {
+	public name: string;
+	public amount: number;
+
+	constructor(name: string, amount: number) {
+		this.name = name;
+		this.amount = amount;
+	}
+}
+
+estensione per attivare l'autocompletamento nel template e compilare il template rilveando errori sui tag e riferimenti ad oggetti (angular language service)
