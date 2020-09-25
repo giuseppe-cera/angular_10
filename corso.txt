@@ -93,3 +93,7 @@ export class Ingredient {
 }
 
 estensione per attivare l'autocompletamento nel template e compilare il template rilveando errori sui tag e riferimenti ad oggetti (angular language service)
+
+Il source map su browser si trova in developer-tools->web-pack->.
+
+estensione chrome -> angular state inspector (permette divedere lo stato della pagina html generata e di cambiarlo dopo avere eseguito $apply()  su console)
